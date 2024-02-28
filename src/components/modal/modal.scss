@@ -1,0 +1,14 @@
+.modal {
+
+  .modal-content {
+    border: 1px solid #494949;
+    position: fixed;
+    z-index: 1;
+    left: 1000;
+    top: 50px;
+    height: 200px;
+    width: 540px;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.768);
+  }
+}
