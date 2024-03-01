@@ -1,7 +1,7 @@
 import { useState } from "react";
-import TodoForm from "../../components/TodoForm";
-import TodoList from "../../components/TodoList";
-import { Todo } from "../../types";
+import { TodoType } from "../../types";
+import TodoInput from "../../components/TodoInput";
+import Todo from "../../components/Todo";
 
 interface ITodoPage {
   userName: string;
@@ -9,15 +9,15 @@ interface ITodoPage {
 
 const TodoPage: React.FC<ITodoPage> = ({ userName }) => {
   
-  const [todos, setTodos] = useState<Todo[]>([]);
+  const [todos, setTodos] = useState<TodoType[]>([]);
 
   return (
     <>
       <section className="todo-page">
         <h1>Här är din todo-lista {userName}</h1>
         <div className="todo-view">
-         <TodoForm setTodos={setTodos} todos={todos}/>
-         <TodoList todos={todos} />
+         <TodoInput setTodos={setTodos} todos={todos}/>
+         <Todo todos={todos} />
         </div>
       </section>
     </>

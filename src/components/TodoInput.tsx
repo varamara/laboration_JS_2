@@ -1,12 +1,12 @@
 import React, { ChangeEvent, useState } from "react";
-import { Todo } from "../types";
+import { TodoType } from "../types";
 
-interface ITodoForm {
-  setTodos: (todos: Todo[]) => void;
-  todos: Todo[];
+interface ITodoInput {
+  setTodos: (todos: TodoType[]) => void;
+  todos: TodoType[];
 }
 
-const TodoForm: React.FC<ITodoForm> = ({ setTodos, todos }) => {
+const TodoInput: React.FC<ITodoInput> = ({ setTodos, todos }) => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [todoInputValue, setTodoInputValue] = useState<string>("");
 
@@ -17,17 +17,18 @@ const TodoForm: React.FC<ITodoForm> = ({ setTodos, todos }) => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    const newTodo: Todo = {
+    const newTodo: TodoType = {
       id: Math.random(),
       text: todoInputValue,
     };
 
-    const newTodos: Todo[] = [...todos, newTodo];
+    const newTodos: TodoType[] = [...todos, newTodo];
 
     setTodos(newTodos);
 
     setTodoInputValue("");
     setIsSubmitted(true);
+    console.log("newTodos", newTodos);
   };
 
   return (
@@ -46,4 +47,4 @@ const TodoForm: React.FC<ITodoForm> = ({ setTodos, todos }) => {
   );
 };
 
-export default TodoForm;
+export default TodoInput;
