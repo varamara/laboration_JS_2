@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { TodoType } from "../../types";
-import TodoInput from "../../components/TodoInput";
-import Todo from "../../components/Todo";
+import TodoContainer from "../../components/todoContainer/TodoContainer";
 
 interface ITodoPage {
   userName: string;
@@ -15,10 +14,7 @@ const TodoPage: React.FC<ITodoPage> = ({ userName }) => {
     <>
       <section className="todo-page">
         <h1>Här är din todo-lista {userName}</h1>
-        <div className="todo-view">
-         <TodoInput setTodos={setTodos} todos={todos}/>
-         <Todo todos={todos} />
-        </div>
+        <TodoContainer todos={todos} setTodos={setTodos}/>
       </section>
     </>
   );

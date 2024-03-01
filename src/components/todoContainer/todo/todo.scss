@@ -1,0 +1,47 @@
+ul {
+  width: 250px;
+  overflow-x: auto;
+  background-color: rgba(255, 255, 255, 0.114);
+  margin: 0 30px;
+  padding: 10px;
+
+  li {
+    margin-top: 4px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 250px;
+    background-color: rgba(255, 255, 255, 0.049);
+
+    span {
+      overflow-x: auto;
+      margin-left: 10px;
+      width: 100px;
+      text-align: left;
+    }
+
+    input[type="checkbox"] {
+      width: 25px;
+      margin: 0 -60px 0 0;
+      cursor: pointer;
+    }
+
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 25px;
+      height: 25px;
+      margin: 10px 10px 10px 0;
+      padding: 3px 7px;
+      border: none;
+      color: white;
+      cursor: pointer;
+
+      img {
+        width: 15px;
+      }
+    }
+  }
+}

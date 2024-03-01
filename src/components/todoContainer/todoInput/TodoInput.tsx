@@ -1,5 +1,6 @@
 import React, { ChangeEvent, useState } from "react";
-import { TodoType } from "../types";
+import { TodoType } from "../../../types";
+import "../todoInput/todo-input.scss";
 
 interface ITodoInput {
   setTodos: (todos: TodoType[]) => void;
@@ -20,6 +21,7 @@ const TodoInput: React.FC<ITodoInput> = ({ setTodos, todos }) => {
     const newTodo: TodoType = {
       id: Math.random(),
       text: todoInputValue,
+      completed: false,
     };
 
     const newTodos: TodoType[] = [...todos, newTodo];
@@ -33,16 +35,18 @@ const TodoInput: React.FC<ITodoInput> = ({ setTodos, todos }) => {
 
   return (
     <>
-      <form className="todo-form" onSubmit={handleSubmit}>
-        <input
-          type="text"
-          placeholder="Skriv in en todo"
-          value={todoInputValue}
-          onChange={handleInputChange}
-        />
-        <button type="submit">Lägg till</button>
-      </form>
-      {isSubmitted && <p>en todo har lagts till!</p>}
+      <section className="todo-input">
+        <form className="todo-form" onSubmit={handleSubmit}>
+          <input
+            type="text"
+            placeholder="Skriv in en todo"
+            value={todoInputValue}
+            onChange={handleInputChange}
+          />
+          <button type="submit">Lägg till</button>
+        </form>
+        {isSubmitted && <p>En todo har lagts till!</p>}
+      </section>
     </>
   );
 };

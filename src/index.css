@@ -39,7 +39,7 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding-left: 80px;
+  padding-left: 5%;
 }
 
 input {
@@ -59,7 +59,8 @@ button {
 button:hover {
   color: black;
   scale: 1.1;
-  background-color: #f0f0f0;
+  background-color: #acacac;
+  cursor: pointer;
 }
 
 h1 {
