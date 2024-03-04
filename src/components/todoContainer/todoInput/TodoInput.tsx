@@ -25,9 +25,7 @@ const TodoInput: React.FC<ITodoInput> = ({ setTodos, todos }) => {
     };
 
     const newTodos: TodoType[] = [...todos, newTodo];
-
     setTodos(newTodos);
-
     setTodoInputValue("");
     setIsSubmitted(true);
     console.log("newTodos", newTodos);

@@ -9,8 +9,6 @@ const App = () =>  {
 
   const [userName, setUserName] = useState("");
 
-
-
   return (
     <Router>
       <Navbar />
