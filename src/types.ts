@@ -4,4 +4,4 @@ export type TodoType = {
     completed: boolean;
 }
 
-// Frågor: varför TodoType och varför funkar inte prev state tack!?
+// Frågor: varför TodoType och varför funkar inte prev state och vilken sorts routing!?
