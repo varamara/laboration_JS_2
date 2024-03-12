@@ -7,14 +7,13 @@ interface ITodoPage {
 }
 
 const TodoPage: React.FC<ITodoPage> = ({ userName }) => {
-  
   const [todos, setTodos] = useState<TodoType[]>([]);
 
   return (
     <>
       <section className="todo-page">
         <h1>Här är din todo-lista {userName}</h1>
-        <TodoContainer todos={todos} setTodos={setTodos}/>
+        <TodoContainer todos={todos} setTodos={setTodos} />
       </section>
     </>
   );
